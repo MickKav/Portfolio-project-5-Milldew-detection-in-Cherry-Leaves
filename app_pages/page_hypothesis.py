@@ -17,7 +17,7 @@ def hypothesis_validation():
     st.subheader("Validation:")
     st.write("To validate this hypothesis, we will analyze the growth characteristics of mildewed leaves.")
     st.write("Symptoms to look for include curled leaves, smaller and pale leaves, distorted growth, and the presence of a whitish fungus.")
-        
+
     # Hypothesis 2
     st.subheader("Hypothesis 2:")
     st.write("We hypothesize that the growth of sour cherry trees is significantly reduced by the presence of the mildew disease.")
