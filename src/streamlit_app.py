@@ -2,6 +2,8 @@ import streamlit as st
 from model_training import train_model, evaluate_model
 from data_preprocessing import load_dataset, preprocess_data
 from app_pages import home, project_summary, data_exploration, model_performance, image_analysis, live_prediction, findings_page
+from data_preprocessing import load_dataset, preprocess_data
+from model_training import train_model, evaluate_model
 
 def main():
     st.title("Cherry Leaves Mildew Detection App")

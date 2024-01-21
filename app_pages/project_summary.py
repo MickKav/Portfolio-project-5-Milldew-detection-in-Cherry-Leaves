@@ -5,6 +5,6 @@ def show_project_summary():
     st.title("Project Summary")
 
     # Placeholder content
-    st.write("Placeholder content for Project Summary.")
-    st.write("Include dataset summary and client requirements.")
+    st.write("Welcome to the Cherry Leaves Mildew Detection Project!")
+    st.write("This dashboard aims to help you analyze and understand the dataset.")
 
