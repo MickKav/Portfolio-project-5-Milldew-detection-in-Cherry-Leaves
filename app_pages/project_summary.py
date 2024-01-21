@@ -8,10 +8,15 @@ def show_project_summary():
     st.write("Welcome to the Cherry Leaves Mildew Detection Project!")
     st.write("This dashboard aims to help you analyze and understand the dataset.")
 
-    # Load the dataset to get counts
-    dataset_path = 'path/to/your/dataset'
-    health_images, _ = load_dataset(dataset_path, 'health')
-    mildew_images, _ = load_dataset(dataset_path, 'mildew')
+    # Count images in each class
+    dataset_path = '/workspace/Portfolio-project-5-Milldew-detection-in-Cherry-Leaves/notebooks/inputs/cherry_leaves_dataset/cheery-leaves'
+    class_counts = count_images_in_subfolders(dataset_path)
+
+    st.header("Dataset Summary:")
+    st.write("The dataset contains images of cherry leaves, categorized into different classes.")
+    
+    for class_name, count in class_counts.items():
+        st.write(f" - Number of {class_name} images: {count}")
 
     st.header("Dataset Summary:")
     st.write("The dataset contains images of cherry leaves, categorized into 'health' and 'mildew' classes.")
