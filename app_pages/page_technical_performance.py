@@ -1,15 +1,19 @@
-# app_pages/page_technical_performance.py
-
 import streamlit as st
+import matplotlib.pyplot as plt
+from src.machine_learning.evaluate_clf import load_test_evaluation
 
 def technical_performance_body():
     st.title("Technical Performance")
 
     st.write("This page focuses on evaluating the technical performance of the Cherry Leaves Mildew Detection model.")
 
-    # Add sections for technical performance metrics and visualizations
-    st.header("Model Evaluation Metrics")
-    st.write("Provide metrics such as accuracy, precision, recall, F1 score, etc.")
+    version = 'v1'
+
+    # Labels Distribution on Train, Validation, and Test Sets
+    st.header("Train, Validation, and Test Set: Labels Frequencies")
+    labels_distribution = plt.imread(f"notebooks/outputs/{version}/labels_distribution.png")
+    st.image(labels_distribution, caption='Labels Distribution on Train, Validation, and Test Sets')
+    st.write("---")
 
     # Example: Display confusion matrix, ROC curve, or other relevant visualizations
     st.header("Visualizations")
