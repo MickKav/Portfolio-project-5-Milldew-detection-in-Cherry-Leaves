@@ -3,27 +3,6 @@ from model_training import train_model, evaluate_model
 from data_preprocessing import load_dataset, preprocess_data
 from app_pages import home, project_summary, data_exploration, model_performance, image_analysis, live_prediction, findings_page
 
-def show_home():
-    home.show_home()
-
-def show_project_summary():
-    project_summary.show_project_summary()
-
-def show_data_exploration():
-    data_exploration.show_data_exploration()
-
-def show_model_performance():
-    model_performance.show_model_performance()
-
-def show_image_analysis():
-    image_analysis.show_image_analysis()
-
-def show_live_prediction():
-    live_prediction.show_live_prediction()
-
-def show_findings_page():
-    findings_page.show_findings_page()
-
 def main():
     st.title("Cherry Leaves Mildew Detection App")
 
@@ -39,8 +18,25 @@ def main():
         "Findings Page": findings_page.show_findings_page,
     }
 
-    selected_page = st.sidebar.selectbox("Select a Section", list(pages.keys()))
-    pages[selected_page]()
+    # Sidebar navigation
+    page = st.sidebar.selectbox("Select Page", ["Home", "Project Summary", "Data Exploration", 
+                                "Model Performance", "Image Analysis", "Live Prediction", "Findings Page"])
+
+    # Display the selected page
+    if page == "Home":
+        home.show_home()
+    elif page == "Project Summary":
+        project_summary.show_project_summary()
+    elif page == "Data Exploration":
+        data_exploration.show_data_exploration()
+    elif page == "Model Performance":
+        model_performance.show_model_performance()
+    elif page == "Image Analysis":
+        image_analysis.show_image_analysis()
+    elif page == "Live Prediction":
+        live_prediction.show_live_prediction()
+    elif page == "Findings Page":
+        findings_page.show_findings_page()
 
 if __name__ == "__main__":
     main()
