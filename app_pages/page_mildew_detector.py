@@ -1,5 +1,5 @@
 import streamlit as st
-from data_preprocessing import count_images_in_subfolders
+from src.data_preprocessing import count_images_in_subfolders
 
 def mildew_detection_body():
     st.title("Mildew Detection")
@@ -8,9 +8,9 @@ def mildew_detection_body():
     
     # Verify Dataset Path
     # Assign dataset paths
-    train_path = '/path/to/your/train/data'
-    validation_path = '/path/to/your/validation/data'
-    test_path = '/path/to/your/test/data'
+    train_path = '/workspace/Portfolio-project-5-Milldew-detection-in-Cherry-Leaves/notebooks/inputs/cherry_leaves_dataset/cherry-leaves/train'
+    validation_path = '/workspace/Portfolio-project-5-Milldew-detection-in-Cherry-Leaves/notebooks/inputs/cherry_leaves_dataset/cherry-leaves/validation'
+    test_path = '/workspace/Portfolio-project-5-Milldew-detection-in-Cherry-Leaves/notebooks/inputs/cherry_leaves_dataset/cherry-leaves/test'
 
     # Count images in each class
     class_counts = count_images_in_subfolders(train_path)
