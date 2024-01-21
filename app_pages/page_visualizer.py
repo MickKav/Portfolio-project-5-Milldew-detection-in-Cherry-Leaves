@@ -17,10 +17,9 @@ def leaves_visualizer():
     version = 'v1'
 
     if st.checkbox("Difference between average and variability image"):
-        #avg_mildew = plt.imread(f"/notebooks/outputs/{version}/avg_var_powdery_mildew.png")
+    
         avg_mildew_path = os.path.join("notebooks", "outputs", version, "avg_var_powdery_mildew.png")
         avg_healthy_path = os.path.join("notebooks", "outputs", version, "avg_var_healthy.png")
-        #avg_healthy = plt.imread(f"/notebooks/outputs/{version}/avg_var_healthy.png")
 
         if os.path.exists(avg_mildew_path):
            avg_mildew = plt.imread(avg_mildew_path)
