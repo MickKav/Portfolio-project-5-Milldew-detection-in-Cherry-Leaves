@@ -21,6 +21,12 @@ def load_dataset(data_path, label):
 
     return image_list, label_list
 
+    train_path = '/workspace/Portfolio-project-5-Mildew-detection-in-Cherry-Leaves/inputs/cherry_leaves_dataset/cherry-leaves/train'
+    validation_path = '/workspace/Portfolio-project-5-Mildew-detection-in-Cherry-Leaves/inputs/cherry_leaves_dataset/cherry-leaves/validation'
+    test_path = '/workspace/Portfolio-project-5-Mildew-detection-in-Cherry-Leaves/inputs/cherry_leaves_dataset/cherry-leaves/test'
+    dataset_path = '/workspace/Portfolio-project-5-Milldew-detection-in-Cherry-Leaves/notebooks/inputs/cherry_leaves_dataset/cherry-leaves'
+
+
 
 def count_images_in_subfolders(dataset_path):
     class_counts = {}

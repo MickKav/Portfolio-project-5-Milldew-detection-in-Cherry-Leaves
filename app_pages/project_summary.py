@@ -1,5 +1,6 @@
 # app_pages/project_summary.py
 import streamlit as st
+from data_preprocessing import count_images_in_subfolders
 
 def show_project_summary():
     st.title("Project Summary")
@@ -8,20 +9,35 @@ def show_project_summary():
     st.write("Welcome to the Cherry Leaves Mildew Detection Project!")
     st.write("This dashboard aims to help you analyze and understand the dataset.")
 
-    # Count images in each class
-    dataset_path = '/workspace/Portfolio-project-5-Milldew-detection-in-Cherry-Leaves/notebooks/inputs/cherry_leaves_dataset/cheery-leaves'
-    class_counts = count_images_in_subfolders(dataset_path)
+    # Verify Dataset Paths
+    st.header("Dataset Paths:")
+    st.write(f"- Training Set: {train_path}")
+    st.write(f"- Validation Set: {validation_path}")
+    st.write(f"- Test Set: {test_path}")
+
+    # Count images in each class for specific paths
+    class_counts_train = count_images_in_subfolders(train_path)
+    class_counts_validation = count_images_in_subfolders(validation_path)
+    class_counts_test = count_images_in_subfolders(test_path)
 
     st.header("Dataset Summary:")
     st.write("The dataset contains images of cherry leaves, categorized into different classes.")
-    
-    for class_name, count in class_counts.items():
+
+    # Display counts for each class in training set
+    st.subheader("Training Set:")
+    for class_name, count in class_counts_train.items():
         st.write(f" - Number of {class_name} images: {count}")
 
-    st.header("Dataset Summary:")
-    st.write("The dataset contains images of cherry leaves, categorized into 'health' and 'mildew' classes.")
-    st.write(f" - Number of health images: {len(health_images)}")
-    st.write(f" - Number of mildew images: {len(mildew_images)}")
+    # Display counts for each class in validation set
+    st.subheader("Validation Set:")
+    for class_name, count in class_counts_validation.items():
+        st.write(f" - Number of {class_name} images: {count}")
+
+    # Display counts for each class in test set
+    st.subheader("Test Set:")
+    for class_name, count in class_counts_test.items():
+        st.write(f" - Number of {class_name} images: {count}")
+
     # Add any additional dataset summary information
 
     st.header("Client Requirements:")

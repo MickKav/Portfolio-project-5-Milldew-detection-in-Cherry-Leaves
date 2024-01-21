@@ -8,6 +8,11 @@ from model_training import train_model, evaluate_model
 def main():
     st.title("Cherry Leaves Mildew Detection App")
 
+    # Verify Dataset Path
+    dataset_path = '/workspace/Portfolio-project-5-Milldew-detection-in-Cherry-Leaves/notebooks/inputs/cherry_leaves_dataset/cherry-leaves'
+    if not st.file_uploader("Upload a file to check the dataset path:", type=["csv", "txt"]):
+        st.write(f"Current dataset path: {dataset_path}")
+
     # Sidebar navigation
     st.sidebar.title("Navigation")
     pages = {

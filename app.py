@@ -1,32 +1,14 @@
 import streamlit as st
+from app_pages.multipage import MultiPage
 
-# Define key sections
-sections = ["Home", "Project Summary", "Data Exploration", "Model Performance", "Image Analysis", "Live Prediction", "Findings Page"]
+from app_pages.page_project_summary import show_project_summary
+from app_pages.page_visualizer import visualize_data
+from app_pages.page_mildew_detector import mildew_detection_body
 
-# Page layout
-page = st.sidebar.selectbox("Select a Section", sections)
+app = MultiPage(app_name="Cherry Leaves Mildew Detection")  # Modify the app name
 
-# Render different pages based on user selection
-if page == "Home":
-    st.title("Cherry Leaves Mildew Detection Project")
-    st.write("Brief overview and project introduction.")
+app.add_page("Project Summary", show_project_summary)
+app.add_page("Data Visualizer", visualize_data)
+app.add_page("Mildew Detection", mildew_detection_body)
 
-elif page == "Project Summary":
-    st.title("Project Summary")
-    st.write("Dataset summary and client requirements.")
-
-elif page == "Data Exploration":
-    st.title("Data Exploration")
-    st.write("Visualizations and insights gained during data analysis.")
-
-# Add similar sections for other pages...
-
-elif page == "Image Analysis":
-    st.title("Image Analysis")
-    st.write("Visualizations related to image analysis.")
-
-elif page == "Findings Page":
-    st.title("Findings Page")
-    st.write("Visualizations and insights related to differentiating healthy and affected cherry leaves.")
-
-# Add more sections as needed...
+app.run()
