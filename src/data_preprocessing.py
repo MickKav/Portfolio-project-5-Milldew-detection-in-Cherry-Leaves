@@ -21,9 +21,21 @@ def load_dataset(data_path, label):
 
     return image_list, label_list
 
+
+def count_images_in_subfolders(dataset_path):
+    class_counts = {}
+    
+    for class_name in os.listdir(dataset_path):
+        class_path = os.path.join(dataset_path, class_name)
+        if os.path.isdir(class_path):
+            images = [file for file in os.listdir(class_path) if file.endswith('.jpg')]
+            class_counts[class_name] = len(images)
+    
+    return class_counts
+
+
 def preprocess_data(df):
     # Code for data preprocessing
-    # For illustration, let's assume you have a 'feature_columns' list
     feature_columns = ['feature1', 'feature2', 'feature3']
     X = df[feature_columns]
 
