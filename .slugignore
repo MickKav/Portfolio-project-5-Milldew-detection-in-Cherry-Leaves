@@ -20,6 +20,7 @@ env/
 *.pyc
 *.pyo
 *.jpg
+*.JPG
 *.jpeg
 *.png
 __pycache__/

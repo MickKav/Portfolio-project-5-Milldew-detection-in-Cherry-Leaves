@@ -31,7 +31,7 @@ def technical_performance_body():
     st.header("Generalized Performance on Test Set")
     evaluation_data = {
         'Metric': ['Loss', 'Accuracy'],
-        'Value': [0.0355, 0.9976]
+        'Value': [0.0516, 0.9893]
     }
 
     evaluation_df = pd.DataFrame(evaluation_data).set_index('Metric')
