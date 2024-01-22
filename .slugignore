@@ -1,2 +1,10 @@
 tests/
 docs/
+data/
+.idea/
+.vscode/
+test/
+venv/
+env/
+.virtualenv/
+datasets/
