@@ -7,4 +7,13 @@ test/
 venv/
 env/
 .virtualenv/
+*.pdf
+*.csv
+*.xls
+*.xlsx
+*.db
+*.sublime-workspace
+*.sublime-project
+*.pyc
+*.pyo
 datasets/
