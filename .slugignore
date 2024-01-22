@@ -20,12 +20,9 @@ env/
 datasets/
 notebooks/
 *.jpg
-*.jpg
 *.jpeg
 *.png
 __pycache__/
-*.pyc
-*.pyo
 logs/
 *.log
 .env
@@ -37,6 +34,3 @@ db.sqlite3
 .ipynb_checkpoints/
 *.min.js
 *.min.css
-dist/
-build/
-*.egg-info/
