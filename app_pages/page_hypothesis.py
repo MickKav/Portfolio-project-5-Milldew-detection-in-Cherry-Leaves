@@ -11,12 +11,12 @@ def hypothesis_validation():
     
     # Hypothesis 1
     st.subheader("Hypothesis 1:")
-    st.write("We suspect that mildewed cherry leaves exhibit distinct visual patterns that differentiate them from healthy leaves.")
+    st.info("We suspect that mildewed cherry leaves exhibit distinct visual patterns that differentiate them from healthy leaves.")
 
     # Validation for Hypothesis 1
     st.subheader("Validation:")
     st.write("To validate this hypothesis, we will analyze the growth characteristics of mildewed leaves.")
-    st.write("Symptoms to look for include curled leaves, smaller and pale leaves, distorted growth, and the presence of a whitish fungus.")
+    st.error("Symptoms to look for include curled leaves, smaller and pale leaves, distorted growth, and the presence of a whitish fungus.")
 
     with st.beta_expander("View Mildewed Leaves Examples"):
         # You can add multiple images here to showcase examples of mildewed leaves
@@ -26,4 +26,4 @@ def hypothesis_validation():
 
         st.image([mildewed_leaf_image_1, mildewed_leaf_image_2, mildewed_leaf_image_3], caption=["Mildewed Leaf 1", "Mildewed Leaf 2", "Mildewed Leaf 3"])
 
-    st.write("Average Image, Variability Image and Difference between Averages studies did not reveal any clear pattern to differentiate one from another.")
+    st.warning("Average Image, Variability Image and Difference between Averages studies did not reveal any clear pattern to differentiate one from another.")
