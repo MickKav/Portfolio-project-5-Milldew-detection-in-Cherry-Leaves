@@ -23,3 +23,14 @@ def load_pkl_file(file_path):
     Load a pickled file
     """
     return joblib.load(filename=file_path)
+
+def count_images_in_subfolders(directory):
+    image_counts = {}
+
+    for subfolder in os.listdir(directory):
+        subfolde_path = os.path.join(directory, subfolder)
+        if os.path.isdir(subfolder_path):
+            images = [file for file in os.listdir(subfolder_path) if file.lower().endswith(('.png', '.jpg', '.jpeg'))]
+            image_counts[subfolder] = len(images)
+
+    return image_counts

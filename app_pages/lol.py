@@ -1,31 +1,19 @@
-import streamlit as st
-from PIL import Image
-import numpy as np
-import pandas as pd
-import plotly.express as px
-from tensorflow.keras.models import load_model
+from src.data_management import load_pkl_file, download_dataframe_as_csv
 
+from src.machine_learning.predictive_analysis import (
+    load_model_and_predict,
+    resize_input_image,
+    plot_predictions_probabilities
+)
 
-# Function for Mildew Detection Page
-def mildew_detection_body():
-    st.info(
-        "As a user, you can upload cherry leaf images for live prediction and view the results in a user-friendly interface."
-    )
-
-    st.write(
-        "You can upload cherry leaf images to check for mildew presence. For live predictions, feel free to upload your images."
-    )
-
-    st.write("---")
-
-    # File uploader for images
+# File uploader for images
     images_buffer = st.file_uploader(
         'Upload cherry leaf images for live prediction. You may select more than one.',
         type=['jpg', 'jpeg', 'png'],
         accept_multiple_files=True
     )
 
-    if images_buffer is not None:
+if images_buffer is not None:
         df_report = pd.DataFrame([])
 
         # Process each uploaded image
