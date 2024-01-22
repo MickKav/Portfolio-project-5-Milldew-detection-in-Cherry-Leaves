@@ -6,7 +6,7 @@ from src.machine_learning.evaluate_clf import load_test_evaluation
 def technical_performance_body():
     st.title("Technical Performance")
 
-    st.write("This page focuses on evaluating the technical performance of the Cherry Leaves Mildew Detection model.")
+    st.info("This page focuses on evaluating the technical performance of the Cherry Leaves Mildew Detection model.")
 
     version = 'v1'
 
@@ -38,5 +38,8 @@ def technical_performance_body():
     st.dataframe(evaluation_df)
 
     # Conclusion and recommendations
-    st.header("Conclusion and Recommendations")
-    st.write("Summarize the findings and make any recommendations for improvement if applicable.")
+    st.warning('''
+                **Conclusion and Recommendations**\n
+                *Summarize the findings and make any recommendations for improvement if applicable.*
+            '''
+            )
