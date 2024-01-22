@@ -8,7 +8,7 @@ def technical_performance_body():
 
     st.info("This page focuses on evaluating the technical performance of the Cherry Leaves Mildew Detection model.")
 
-    version = 'v1'
+    version = 'v3'
 
     # Labels Distribution on Train, Validation, and Test Sets
     st.header("Train, Validation, and Test Set: Labels Frequencies")

@@ -4,6 +4,8 @@ docs/
 data/
 .idea/
 .vscode/
+notebooks/outputs/v1/
+notebooks/outputs/v2/
 test/
 venv/
 env/

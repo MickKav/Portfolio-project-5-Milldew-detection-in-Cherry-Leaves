@@ -14,7 +14,7 @@ def leaves_visualizer():
         f"* The primary objective is to detect mildew in cherry leaves, addressing the need for early disease detection in plants."
     )
 
-    version = 'v1'
+    version = 'v3'
 
     if st.checkbox("Difference between average and variability image"):
     
