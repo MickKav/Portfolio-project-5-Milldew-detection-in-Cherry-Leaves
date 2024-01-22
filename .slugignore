@@ -20,6 +20,9 @@ env/
 datasets/
 notebooks/
 *.jpg
+*.jpg
+*.jpeg
+*.png
 __pycache__/
 *.pyc
 *.pyo
