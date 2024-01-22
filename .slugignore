@@ -17,11 +17,6 @@ env/
 *.sublime-project
 *.pyc
 *.pyo
-notebooks/inputs/cherry_leaves_dataset/cherry-leaves/train/healthy/
-notebooks/inputs/cherry_leaves_dataset/cherry-leaves/train/powdery_mildew/
-notebooks/inputs/cherry_leaves_dataset/cherry-leaves/test/healthy/
-notebooks/inputs/cherry_leaves_dataset/cherry-leaves/test/powdery_mildew/
-src/
 *.jpg
 *.jpeg
 *.png
