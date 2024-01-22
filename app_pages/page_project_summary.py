@@ -1,4 +1,3 @@
-# Import necessary libraries
 import streamlit as st
 
 # Function to show project summary

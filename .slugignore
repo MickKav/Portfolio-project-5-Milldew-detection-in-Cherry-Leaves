@@ -1,5 +1,6 @@
 tests/
 docs/
+.devcontainer/
 data/
 .idea/
 .vscode/
@@ -33,3 +34,6 @@ db.sqlite3
 .ipynb_checkpoints/
 *.min.js
 *.min.css
+dist/
+build/
+*.egg-info/
