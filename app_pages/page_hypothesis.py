@@ -26,3 +26,15 @@ def hypothesis_validation():
         st.image([mildewed_leaf_image_1, mildewed_leaf_image_2, mildewed_leaf_image_3], caption=["Mildewed Leaf 1", "Mildewed Leaf 2", "Mildewed Leaf 3"])
 
     st.warning("Average Image, Variability Image and Difference between Averages studies did not reveal any clear pattern to differentiate one from another.")
+
+    # Hypothesis 2
+    st.subheader("Hypothesis 2:")
+    st.info("Machine learning models can effectively classify cherry leaves as healthy or powdery mildew-affected based on visual features.")
+
+    # Validation for Hypothesis 2
+    st.subheader("Validation:")
+    st.info('''
+            Train and evaluate machine learning models using the dataset to predict the health status of cherry leaves.
+            Use metrics such as accuracy, precision, and recall for validation.
+            You can present the results and visualizations related to the performance of your machine learning models here.
+            ''')
