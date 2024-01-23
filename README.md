@@ -156,5 +156,5 @@ In this project, the following libraries were used for data analysis and machine
 * I'd like to mention taking reference from the Walkthrough project 1 malaria detection project, from where i got a quantity of code for the notebooks, and got extra help from slack and stack overflow.
 * The images used for the gallery page were taken from kaggle.
 
-## Acknowledgements (optional)
+## Acknowledgements
 * Thanks to Niel McEwen for guidance with the project.
