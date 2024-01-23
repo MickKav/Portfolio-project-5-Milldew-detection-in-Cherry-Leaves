@@ -24,7 +24,6 @@ develop-eggs/
 dist/
 downloads/
 datasets/
-notebooks/
 logs/
 *.log
 .vscode/
